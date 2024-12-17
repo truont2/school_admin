@@ -1,1 +1,1 @@
-# school_admin
+# school_dashboard
