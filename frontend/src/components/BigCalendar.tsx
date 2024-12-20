@@ -18,7 +18,7 @@ export default function BigCalendar() {
                 center: "title",
                 right: "timeGridDay,timeGridWeek,dayGridMonth",
             }}
-            height={"auto"} // Adjust height automatically
+            height={"98%"} // Adjust height automatically
             editable={true} // Allows drag and drop
             selectable={true} // Allows selection
             slotMinTime="08:00:00" // Start time at 8:00 AM
@@ -26,8 +26,6 @@ export default function BigCalendar() {
             events={eventsData}
             expandRows={true} // Expand rows to fill the height
             nowIndicator={true} // Show current time
-            contentHeight="auto" // Make height adjust dynamically
-            aspectRatio={1.35} // Adjust width/height ratio
         />
     );
 }
