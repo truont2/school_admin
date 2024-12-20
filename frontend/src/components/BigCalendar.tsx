@@ -11,22 +11,23 @@ export default function BigCalendar() {
 
     return (
         <FullCalendar
-            // ref={calendarRef}
             plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
             initialView="dayGridMonth" // Default view
             headerToolbar={{
-                left: "",
+                left: "prev,next today",
                 center: "title",
-                right: "timeGridDay,timeGridWeek,dayGridMonth", // View buttons
+                right: "timeGridDay,timeGridWeek,dayGridMonth",
             }}
-            height={"98%"}
+            height={"auto"} // Adjust height automatically
             editable={true} // Allows drag and drop
             selectable={true} // Allows selection
             slotMinTime="08:00:00" // Start time at 8:00 AM
             slotMaxTime="17:00:00" // End time at 5:00 PM
             events={eventsData}
-            expandRows={true}
-            nowIndicator={true}
+            expandRows={true} // Expand rows to fill the height
+            nowIndicator={true} // Show current time
+            contentHeight="auto" // Make height adjust dynamically
+            aspectRatio={1.35} // Adjust width/height ratio
         />
     );
 }
