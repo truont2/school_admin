@@ -1,5 +1,6 @@
 "use client";
 
+import { eventsData } from "@/app/lib/data";
 import dayGridPlugin from "@fullcalendar/daygrid"; // Month view
 import interactionPlugin from "@fullcalendar/interaction"; // For dateClick, etc.
 import FullCalendar from "@fullcalendar/react";
@@ -23,11 +24,9 @@ export default function BigCalendar() {
             selectable={true} // Allows selection
             slotMinTime="08:00:00" // Start time at 8:00 AM
             slotMaxTime="17:00:00" // End time at 5:00 PM
-            events={[
-                { title: "Event 1", start: "2024-12-17" },
-                { title: "Event 2", start: "2024-12-18", end: "2025-06-14" },
-            ]}
+            events={eventsData}
             expandRows={true}
+            nowIndicator={true}
         />
     );
 }
