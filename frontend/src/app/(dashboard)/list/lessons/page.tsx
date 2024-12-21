@@ -1,4 +1,5 @@
 import { lessonsData, role } from "@/app/lib/data";
+import FormModal from "@/components/FormModal";
 // import FormModal from "@/components/FormModal";
 import Pagination from "@/components/Pagination";
 import Table from "@/components/Table";
@@ -45,7 +46,7 @@ const LessonListPage = () => {
                 <div className="flex items-center gap-2">
                     {role === "admin" && (
                         <>
-                            {/* <FormModal
+                            <FormModal
                                 table="lesson"
                                 type="update"
                                 data={item}
@@ -54,7 +55,7 @@ const LessonListPage = () => {
                                 table="lesson"
                                 type="delete"
                                 id={item.id}
-                            /> */}
+                            />
                         </>
                     )}
                 </div>
@@ -88,9 +89,9 @@ const LessonListPage = () => {
                                 height={14}
                             />
                         </button>
-                        {/* {role === "admin" && (
+                        {role === "admin" && (
                             <FormModal table="lesson" type="create" />
-                        )} */}
+                        )}
                     </div>
                 </div>
             </div>

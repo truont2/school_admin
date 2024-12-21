@@ -1,4 +1,5 @@
 import { eventsData, role } from "@/app/lib/data";
+import FormModal from "@/components/FormModal";
 // import FormModal from "@/components/FormModal";
 import Pagination from "@/components/Pagination";
 import Table from "@/components/Table";
@@ -59,7 +60,7 @@ const EventListPage = () => {
                 <div className="flex items-center gap-2">
                     {role === "admin" && (
                         <>
-                            {/* <FormModal
+                            <FormModal
                                 table="event"
                                 type="update"
                                 data={item}
@@ -68,7 +69,7 @@ const EventListPage = () => {
                                 table="event"
                                 type="delete"
                                 id={item.id}
-                            /> */}
+                            />
                         </>
                     )}
                 </div>
@@ -102,9 +103,9 @@ const EventListPage = () => {
                                 height={14}
                             />
                         </button>
-                        {/* {role === "admin" && (
+                        {role === "admin" && (
                             <FormModal table="event" type="create" />
-                        )} */}
+                        )}
                     </div>
                 </div>
             </div>

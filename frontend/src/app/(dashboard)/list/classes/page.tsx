@@ -1,4 +1,5 @@
 import { classesData } from "@/app/lib/data";
+import FormModal from "@/components/FormModal";
 // import FormModal from "@/components/FormModal";
 import Pagination from "@/components/Pagination";
 import Table from "@/components/Table";
@@ -51,7 +52,7 @@ const ClassListPage = () => {
             <td className="hidden md:table-cell">{item.supervisor}</td>
             <td>
                 <div className="flex items-center gap-2">
-                    {/* {role === "admin" && (
+                    {role === "admin" && (
                         <>
                             <FormModal
                                 table="class"
@@ -64,7 +65,7 @@ const ClassListPage = () => {
                                 id={item.id}
                             />
                         </>
-                    )} */}
+                    )}
                 </div>
             </td>
         </tr>
@@ -96,9 +97,9 @@ const ClassListPage = () => {
                                 height={14}
                             />
                         </button>
-                        {/* {role === "admin" && (
+                        {role === "admin" && (
                             <FormModal table="class" type="create" />
-                        )} */}
+                        )}
                     </div>
                 </div>
             </div>

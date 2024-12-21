@@ -1,4 +1,5 @@
 import { assignmentsData, role } from "@/app/lib/data";
+import FormModal from "@/components/FormModal";
 // import FormModal from "@/components/FormModal";
 import Pagination from "@/components/Pagination";
 import Table from "@/components/Table";
@@ -53,7 +54,7 @@ const AssignmentListPage = () => {
                     {role === "admin" ||
                         (role === "teacher" && (
                             <>
-                                {/* <FormModal
+                                <FormModal
                                     table="assignment"
                                     type="update"
                                     data={item}
@@ -62,7 +63,7 @@ const AssignmentListPage = () => {
                                     table="assignment"
                                     type="delete"
                                     id={item.id}
-                                /> */}
+                                />
                             </>
                         ))}
                 </div>
@@ -96,10 +97,10 @@ const AssignmentListPage = () => {
                                 height={14}
                             />
                         </button>
-                        {/* {role === "admin" ||
+                        {role === "admin" ||
                             (role === "teacher" && (
                                 <FormModal table="assignment" type="create" />
-                            ))} */}
+                            ))}
                     </div>
                 </div>
             </div>

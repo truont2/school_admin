@@ -1,4 +1,5 @@
 import { resultsData, role } from "@/app/lib/data";
+import FormModal from "@/components/FormModal";
 // import FormModal from "@/components/FormModal";
 import Pagination from "@/components/Pagination";
 import Table from "@/components/Table";
@@ -68,7 +69,7 @@ const ResultListPage = () => {
                     {role === "admin" ||
                         (role === "teacher" && (
                             <>
-                                {/* <FormModal
+                                <FormModal
                                     table="result"
                                     type="update"
                                     data={item}
@@ -77,7 +78,7 @@ const ResultListPage = () => {
                                     table="result"
                                     type="delete"
                                     id={item.id}
-                                /> */}
+                                />
                             </>
                         ))}
                 </div>
@@ -111,10 +112,10 @@ const ResultListPage = () => {
                                 height={14}
                             />
                         </button>
-                        {/* {role === "admin" ||
+                        {role === "admin" ||
                             (role === "teacher" && (
                                 <FormModal table="result" type="create" />
-                            ))} */}
+                            ))}
                     </div>
                 </div>
             </div>

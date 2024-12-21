@@ -1,5 +1,6 @@
 // import FormModal from "@/components/FormModal";
 import { examsData, role } from "@/app/lib/data";
+import FormModal from "@/components/FormModal";
 import Pagination from "@/components/Pagination";
 import Table from "@/components/Table";
 import TableSearch from "@/components/TableSearch";
@@ -53,7 +54,7 @@ const ExamListPage = () => {
                     {role === "admin" ||
                         (role === "teacher" && (
                             <>
-                                {/* <FormModal
+                                <FormModal
                                     table="exam"
                                     type="update"
                                     data={item}
@@ -62,7 +63,7 @@ const ExamListPage = () => {
                                     table="exam"
                                     type="delete"
                                     id={item.id}
-                                /> */}
+                                />
                             </>
                         ))}
                 </div>
@@ -96,10 +97,10 @@ const ExamListPage = () => {
                                 height={14}
                             />
                         </button>
-                        {/* {role === "admin" ||
+                        {role === "admin" ||
                             (role === "teacher" && (
                                 <FormModal table="exam" type="create" />
-                            ))} */}
+                            ))}
                     </div>
                 </div>
             </div>
