@@ -1,5 +1,5 @@
-import { lessonsData, role } from "@/app/lib/data";
 import FormModal from "@/components/FormModal";
+import { lessonsData, role } from "@/lib/data";
 // import FormModal from "@/components/FormModal";
 import Pagination from "@/components/Pagination";
 import Table from "@/components/Table";

@@ -1,6 +1,6 @@
 "use client";
 
-import { eventsData } from "@/app/lib/data";
+import { eventsData } from "@/lib/data";
 import dayGridPlugin from "@fullcalendar/daygrid"; // Month view
 import interactionPlugin from "@fullcalendar/interaction"; // For dateClick, etc.
 import FullCalendar from "@fullcalendar/react";
