@@ -83,14 +83,6 @@ const renderRow = (item: TeacherList) => (
                     </button>
                 </Link>
                 {role === "admin" && (
-                    // <button className="w-7 h-7 flex items-center justify-center rounded-full bg-Purple">
-                    //     <Image
-                    //         src="/delete.png"
-                    //         alt=""
-                    //         width={16}
-                    //         height={16}
-                    //     />
-                    // </button>
                     <FormModal table="teacher" type="delete" id={item.id} />
                 )}
             </div>
@@ -144,6 +136,7 @@ const TeachersListPage = async ({
         }),
         prisma.teacher.count({ where: query }),
     ]);
+
     return (
         <div className="bg-white p-4 rounded-md flex-1 m-4 mt-0">
             {/* top */}
