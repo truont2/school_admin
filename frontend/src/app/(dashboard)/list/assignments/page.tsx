@@ -9,6 +9,7 @@ import { ITEM_PER_PAGE } from "@/lib/settings";
 import { Assignment, Class, Prisma, Subject, Teacher } from "@prisma/client";
 import Image from "next/image";
 
+// Augment a Prisma model (Assignment) with additional relational data (lesson object).
 type AssignmentList = Assignment & {
     lesson: {
         subject: Subject;
